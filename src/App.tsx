@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center h-screen w-screen bg-black overflow-hidden">
+    <div className="relative flex items-center justify-center h-dvh w-screen bg-black overflow-hidden">
       <BeeSwarm />
       <div
         className="absolute z-10 text-7xl md:text-9xl overflow-y-clip"
