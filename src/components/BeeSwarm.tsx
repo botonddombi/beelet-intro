@@ -6,7 +6,7 @@ export function BeeSwarm() {
 
   return (
     <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.5 }}>
-      {Array.from({ length: SIM_CONFIG.BEE_COUNT }, (_, i) => (
+      {Array.from({ length: SIM_CONFIG.BEE_MAX }, (_, i) => (
         <span
           key={i}
           ref={(el) => { elementsRef.current[i] = el }}
@@ -14,6 +14,8 @@ export function BeeSwarm() {
           style={{
             fontSize: `${beesRef.current[i]?.size ?? 24}px`,
             willChange: 'transform',
+            opacity: 0,
+            transition: 'none',
           }}
         >
           🐝
