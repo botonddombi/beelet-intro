@@ -29,6 +29,24 @@ function App() {
 
   return (
     <div className="relative flex items-center justify-center h-dvh w-screen bg-black overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,60,60,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,60,60,0.2) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          animation: 'grid-twitch-red 6s steps(1) infinite',
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(60,120,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(60,120,255,0.2) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          animation: 'grid-twitch-blue 6s steps(1) infinite',
+        }}
+      />
       <BeeSwarm />
       <div
         className="absolute z-10 text-7xl md:text-9xl overflow-y-clip"

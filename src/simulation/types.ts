@@ -9,6 +9,7 @@ export interface BeeState {
   alive: boolean
   age: number
   lifeTime: number
+  glitch: boolean
 }
 
 export const SIM_CONFIG = {

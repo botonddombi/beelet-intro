@@ -25,6 +25,7 @@ export function createBee(w: number, h: number, alive = true): BeeState {
     alive,
     age: 0,
     lifeTime: randomRange(BEE_LIFE_MIN, BEE_LIFE_MAX),
+    glitch: true,
   }
 }
 
@@ -42,6 +43,7 @@ export function respawnBee(bee: BeeState, w: number, h: number): void {
   bee.alive = true
   bee.age = 0
   bee.lifeTime = randomRange(BEE_LIFE_MIN, BEE_LIFE_MAX)
+  bee.glitch = Math.random() < 0.2
 }
 
 export function updateBee(bee: BeeState, dt: number, w: number, h: number, interaction?: InteractionState): void {

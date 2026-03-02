@@ -104,7 +104,10 @@ export function useBeeSimulation() {
         const el = elementsRef.current[i]
 
         if (!bee.alive) {
-          if (el) el.style.opacity = '0'
+          if (el) {
+            el.style.opacity = '0'
+            el.classList.remove('bee-glitch')
+          }
           continue
         }
 
@@ -131,6 +134,7 @@ export function useBeeSimulation() {
             opacity = 1 - (bee.age - bee.lifeTime) / BEE_FADE_DURATION
           }
           el.style.opacity = String(opacity)
+          el.classList.toggle('bee-glitch', bee.glitch)
         }
       }
 
